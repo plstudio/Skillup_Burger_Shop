@@ -1,6 +1,6 @@
-import React from "react";
-import Founder from "./Founder";
-import Menu from "./Menu";
+import React from 'react'
+import Founder from './Founder'
+import Menu from './Menu'
 
 const Home = () => {
   return (
@@ -10,16 +10,14 @@ const Home = () => {
           <h1>BURGER SHOP</h1>
           <p>Give Yourself a New Taste</p>
 
-          #menu
-            Explore Menu
-          </a>
+          <a href="/menu"> Explore Menu</a>
         </div>
       </section>
 
       <Founder />
       <Menu />
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

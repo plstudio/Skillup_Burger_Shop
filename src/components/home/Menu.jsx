@@ -1,6 +1,10 @@
 import React from 'react'
 import MenuCard from './MenuCard'
 
+import burger1 from '../../assets/burger1.png'
+import burger2 from '../../assets/burger2.png'
+import burger3 from '../../assets/burger3.png'
+
 const Menu = () => {
   const addToCartHandler = (itemNum) => {
     alert(`Added item ${itemNum} to cart`)
@@ -13,7 +17,7 @@ const Menu = () => {
       <div>
         <MenuCard
           itemNum={1}
-          burgerSrc="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+          burgerSrc={burger1}
           price={200}
           title="Cheese Burger"
           handler={addToCartHandler}
@@ -22,7 +26,7 @@ const Menu = () => {
 
         <MenuCard
           itemNum={2}
-          burgerSrc="https://images.unsplash.com/photo-1550547660-d9450f859349"
+          burgerSrc={burger2}
           price={250}
           title="Veg Burger"
           handler={addToCartHandler}
@@ -31,9 +35,9 @@ const Menu = () => {
 
         <MenuCard
           itemNum={3}
-          burgerSrc="https://images.unsplash.com/photo-1571091718767-18b5b1457add"
+          burgerSrc={burger3}
           price={300}
-          title="Spicy Burger"
+          title="Cheese Burger with French Fries"
           handler={addToCartHandler}
           delay={0.5}
         />

@@ -1,5 +1,5 @@
-import React from "react";
-import { AiFillYoutube, AiFillInstagram } from "react-icons/ai";
+import React from 'react'
+import { AiFillYoutube, AiFillInstagram } from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -12,16 +12,24 @@ const Footer = () => {
       <div>
         <h5>Follow Us</h5>
 
-        https://www.youtube.com
+        <a
+          href="https://www.youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillYoutube />
         </a>
 
-        https://www.instagram.com
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <AiFillInstagram />
         </a>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
