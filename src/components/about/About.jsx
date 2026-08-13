@@ -1,11 +1,11 @@
 import React from 'react'
-import founder from '../../assets/OIP.jpg'
+/*import founder from '../../assets/OIP.jpg'*/
 
 const About = () => {
   return (
     <section className="about">
       <div>
-        {founder}
+        {/*founder*/}
 
         <h1>About Us</h1>
 
