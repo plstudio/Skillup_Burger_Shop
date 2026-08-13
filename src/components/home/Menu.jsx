@@ -18,7 +18,7 @@ const Menu = () => {
         <MenuCard
           itemNum={1}
           burgerSrc={burger1}
-          price={200}
+          price={8.99}
           title="Cheese Burger"
           handler={addToCartHandler}
           delay={0.1}
@@ -27,7 +27,7 @@ const Menu = () => {
         <MenuCard
           itemNum={2}
           burgerSrc={burger2}
-          price={250}
+          price={10.99}
           title="Veg Burger"
           handler={addToCartHandler}
           delay={0.3}
@@ -36,7 +36,7 @@ const Menu = () => {
         <MenuCard
           itemNum={3}
           burgerSrc={burger3}
-          price={300}
+          price={12.99}
           title="Cheese Burger with French Fries"
           handler={addToCartHandler}
           delay={0.5}

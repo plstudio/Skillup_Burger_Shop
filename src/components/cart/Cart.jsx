@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import burger1 from '../../assets/burger1.png'
 import burger2 from '../../assets/burger2.png'
@@ -20,9 +20,33 @@ const CartItem = ({ value, title, img, increment, decrement }) => (
 )
 
 const Cart = () => {
-  const increment = (item) => {}
+  const [cartItems, setCartItems] = useState({
+    1: 0,
+    2: 0,
+    3: 0,
+  })
 
-  const decrement = (item) => {}
+  const increment = (item) => {
+    setCartItems({
+      ...cartItems,
+      [item]: cartItems[item] + 1,
+    })
+  }
+
+  const decrement = (item) => {
+    if (cartItems[item] > 0) {
+      setCartItems({
+        ...cartItems,
+        [item]: cartItems[item] - 1,
+      })
+    }
+  }
+
+  const subtotal = cartItems[1] * 200 + cartItems[2] * 250 + cartItems[3] * 300
+
+  const tax = subtotal * 0.18
+  const shipping = subtotal > 0 ? 200 : 0
+  const total = subtotal + tax + shipping
 
   return (
     <section className="cart">
@@ -30,43 +54,43 @@ const Cart = () => {
         <CartItem
           title={'Cheese Burger'}
           img={burger1}
-          value={0}
+          value={cartItems[1]}
           increment={() => increment(1)}
           decrement={() => decrement(1)}
         />
+
         <CartItem
           title={'Veg Cheese Burger'}
           img={burger2}
-          value={0}
+          value={cartItems[2]}
           increment={() => increment(2)}
           decrement={() => decrement(2)}
         />
+
         <CartItem
           title={'Cheese Burger with French'}
           img={burger3}
-          value={0}
+          value={cartItems[3]}
           increment={() => increment(3)}
           decrement={() => decrement(3)}
         />
 
-        {/* Fill up the code for Cheese Burger similarly */}
-
         <article>
           <div>
             <h4>Sub Total</h4>
-            <p>₹{2000}</p>
+            <p>${subtotal}</p>
           </div>
           <div>
             <h4>Tax</h4>
-            <p>₹{2000 * 0.18}</p>
+            <p>${tax.toFixed(2)}</p>
           </div>
           <div>
             <h4>Shipping Charges</h4>
-            <p>₹{200}</p>
+            <p>${shipping}</p>
           </div>{' '}
           <div>
             <h4>Total</h4>
-            <p>₹{2000 + 2000 * 0.18 + 200}</p>
+            <p>${total.toFixed(2)}</p>
           </div>
           <Link to="/shipping">Checkout</Link>
         </article>
