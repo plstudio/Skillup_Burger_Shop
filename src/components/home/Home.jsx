@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Founder from './Founder'
 import Menu from './Menu'
 
@@ -10,7 +11,7 @@ const Home = () => {
           <h1>BURGER SHOP</h1>
           <p>Give Yourself a New Taste</p>
 
-          <a href="/menu"> Explore Menu</a>
+          <Link to="/menu">Explore Menu</Link>
         </div>
       </section>
 
