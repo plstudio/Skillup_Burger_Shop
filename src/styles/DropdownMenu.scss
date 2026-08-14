@@ -1,101 +1,90 @@
-.navbar {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  width: auto !important;
-}
-
-.container {
-  padding: 0 !important;
-}
-
 .btn-group {
   position: relative;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dropdown-toggle {
-  background: linear-gradient(135deg, #ff7b00, #ffb700) !important;
+  background: linear-gradient(135deg, #ff8a00, #ffb700);
 
-  border: none !important;
-  color: white !important;
+  border: none;
+  outline: none;
+
+  color: white;
 
   padding: 0.8rem 1.3rem;
 
-  border-radius: 14px !important;
+  border-radius: 14px;
 
-  font-weight: 700;
   font-size: 0.95rem;
+  font-weight: 700;
 
-  text-transform: uppercase;
   letter-spacing: 0.5px;
 
   cursor: pointer;
 
-  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.35);
+  box-shadow: 0 8px 20px rgba(255, 138, 0, 0.35);
 
   transition: all 0.3s ease;
 
   &:hover {
     transform: translateY(-2px);
 
-    box-shadow: 0 12px 30px rgba(255, 123, 0, 0.45);
+    box-shadow: 0 12px 30px rgba(255, 138, 0, 0.45);
   }
 }
 
-.dropdown-menu {
+.dropdown-menu-custom {
   position: absolute;
+
   top: calc(100% + 10px);
   right: 0;
 
   min-width: 220px;
 
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(15px);
-
-  border: none !important;
-  border-radius: 16px;
-
   padding: 0.5rem;
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.97);
 
-  overflow: hidden;
+  backdrop-filter: blur(15px);
+
+  border-radius: 16px;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+
+  list-style: none;
+
   z-index: 9999;
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
 }
 
-.dropdown-item {
-  width: 100%;
+.dropdown-menu-custom li {
+  margin: 0;
+  padding: 0;
+}
 
-  border: none;
-  background: transparent;
+.dropdown-menu-custom li a {
+  display: block;
 
   padding: 0.9rem 1rem;
 
-  border-radius: 10px;
+  text-decoration: none;
 
-  text-align: left;
-
-  font-weight: 600;
   color: #1f2937;
 
+  border-radius: 10px;
+
+  font-weight: 600;
+
   transition: all 0.25s ease;
+}
 
-  &:hover {
-    background: linear-gradient(135deg, #ff7b00, #ffb700);
+.dropdown-menu-custom li a:hover {
+  background: linear-gradient(135deg, #ff8a00, #ffb700);
 
-    color: white;
+  color: white;
 
-    transform: translateX(4px);
-  }
+  transform: translateX(4px);
 }
 
 @media (max-width: 768px) {
@@ -104,7 +93,7 @@
     font-size: 0.9rem;
   }
 
-  .dropdown-menu {
+  .dropdown-menu-custom {
     min-width: 180px;
   }
 }

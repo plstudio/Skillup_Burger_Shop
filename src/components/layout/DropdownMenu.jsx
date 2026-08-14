@@ -32,41 +32,26 @@ function DropdownMenu() {
   }, [])
 
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div className="container">
-          {/* <Link className="navbar-brand" to="/">
-            Burger Shop
-          </Link> */}
+    <div className="btn-group" ref={menuRef}>
+      <button
+        type="button"
+        className="dropdown-toggle"
+        onClick={() => setOpen(!open)}
+      >
+        MENU
+      </button>
 
-          <div className="btn-group" ref={menuRef}>
-            <button
-              type="button"
-              className="btn btn-primary dropdown-toggle"
-              onClick={() => setOpen(!open)}
-            >
-              Menu
-            </button>
-
-            {open && (
-              <ul
-                className="dropdown-menu dropdown-menu-end show"
-                style={{ display: 'block' }}
-              >
-                {navLinks.map((d, i) => (
-                  <li key={i}>
-                    <Link to={d.path} onClick={() => setOpen(false)}>
-                      <button className="dropdown-item" type="button">
-                        {d.name}
-                      </button>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
-      </nav>
+      {open && (
+        <ul className="dropdown-menu-custom">
+          {navLinks.map((d, i) => (
+            <li key={i}>
+              <Link to={d.path} onClick={() => setOpen(false)}>
+                {d.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }
