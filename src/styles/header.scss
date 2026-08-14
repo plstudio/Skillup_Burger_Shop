@@ -1,41 +1,255 @@
-@import "colors";
+@import 'colors';
 
 nav {
   height: 5rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
   background-color: white;
+  max-width: 1400px;
+  margin: auto;
+  justify-content: space-between;
+}
 
-  > div {
-    display: flex;
-    align-items: center;
+a {
+  text-decoration: none;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: white;
+    background: linear-gradient(135deg, #ff7b00, #ffb700);
+    transform: translateY(-2px);
+  }
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ff7b00, #ffb700);
+
+  color: white !important;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(255, 123, 0, 0.4);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 30px rgba(255, 123, 0, 0.5);
+  }
+}
+
+> div {
+  display: flex;
+  align-items: center;
+
+  > svg {
+    color: $red;
+    font-size: 3rem;
+  }
+
+  > a {
+    margin: 0 2rem;
+    color: $dark;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $lightdark;
+    }
 
     > svg {
       color: $red;
-      font-size: 3rem;
-    }
-
-    > a {
-      margin: 0 2rem;
-      color: $dark;
-      transition: color 0.3s;
-
+      transition: inherit;
+      font-size: 1.5rem;
       &:hover {
         color: $lightdark;
       }
-
-      > svg {
-        color: $red;
-        transition: inherit;
-        font-size: 1.5rem;
-        &:hover {
-          color: $lightdark;
-        }
-      }
     }
+  }
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #ff7b00, #ffb700);
+
+  color: white !important;
+  font-weight: 700;
+
+  box-shadow: 0 10px 25px rgba(255, 123, 0, 0.4);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow: 0 15px 30px rgba(255, 123, 0, 0.5);
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  nav {
+    // max-width: 1400px;
+    // margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 2rem;
+    gap: 2rem;
+  }
+}
+
+.logo {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1.4rem;
+  font-weight: 800;
+
+  color: #ff7b00;
+  text-decoration: none;
+}
+
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: #ff7b00;
+    }
+  }
+}
+
+.menu-btn {
+  background: linear-gradient(135deg, #ff7b00, #ffb700);
+
+  color: white;
+  border: none;
+
+  padding: 0.8rem 1.4rem;
+
+  font-weight: 700;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(255, 123, 0, 0.35);
+
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.home-content {
+  max-width: 650px;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .menu-btn {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.dropdown-toggle {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #ff7b00, #ffb700) !important;
+
+  color: white !important;
+
+  border: none !important;
+
+  border-radius: 12px !important;
+
+  padding: 0.75rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .btn-group {
+    display: block;
+  }
+
+  header nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .home h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .home p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
   }
 }
 

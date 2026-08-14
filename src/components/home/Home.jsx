@@ -8,10 +8,13 @@ const Home = () => {
     <>
       <section className="home">
         <div>
-          <h1>BURGER SHOP</h1>
-          <p>Give Yourself a New Taste</p>
-
-          <Link to="/menu">Explore Menu</Link>
+          <h1>Burger Worth Remembering</h1>
+          <p>
+            Fresh ingredients. Bold flavor. Made to order and delivered hot.
+          </p>
+          <Link to="/menu" className="hero-btn">
+            Explore Menu
+          </Link>
         </div>
       </section>
 
