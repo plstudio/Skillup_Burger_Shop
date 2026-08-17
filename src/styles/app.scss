@@ -15,6 +15,27 @@ a {
 
 @import 'colors';
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
 .notFound {
   background-color: $pink;
   width: 100%;

@@ -1,14 +1,14 @@
 header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
 
   width: 100%;
 
   z-index: 1000;
-
-  background: transparent;
-  box-shadow: none;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
   nav {
     max-width: 1400px;
@@ -36,7 +36,7 @@ header {
   font-size: 1.8rem;
   font-weight: 800;
 
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  text-shadow: none;
 
   transition: all 0.3s ease;
 
@@ -52,24 +52,22 @@ header {
   align-items: center;
   justify-content: center;
 
-  gap: 2rem;
+  gap: 2.5rem;
 
   a {
-    color: white;
+    color: #1f2937;
 
     text-decoration: none;
 
     font-size: 1rem;
     font-weight: 600;
 
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-
     position: relative;
 
     transition: all 0.3s ease;
 
     &:hover {
-      color: #ffb700;
+      color: #ff8a00;
     }
 
     &::after {
@@ -83,7 +81,7 @@ header {
       width: 0;
       height: 2px;
 
-      background: #ffb700;
+      background: #ff8a00;
 
       transition: width 0.3s ease;
     }

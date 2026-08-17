@@ -29,23 +29,26 @@ import './styles/about.scss'
 
 function App() {
   return (
-    <Router>
-      <Header isAuthenticated={true} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/shipping" element={<Shipping />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/me" element={<Profile />} />
-        <Route path="/myorders" element={<MyOrders />} />
-        <Route path="/order/:id" element={<OrderDetails />} />
-      </Routes>
-
-      <Footer />
-    </Router>
+    <>
+      <Router>
+        <Header isAuthenticated={true} />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/me" element={<Profile />} />
+            <Route path="/myorders" element={<MyOrders />} />
+            <Route path="/order/:id" element={<OrderDetails />} />
+          </Routes>
+        </main>
+        <Footer />
+      </Router>
+    </>
   )
 }
 

@@ -1,19 +1,22 @@
 import React from 'react'
-import Founder from '../../assets/OIP.jpg'
+import Founder from '../../assets/team.png'
 
 const About = () => {
   return (
     <section className="about">
-      <div>
+      <main>
         <img src={Founder} alt="Founder" />
+        <div className="about-content">
+          <h1>About Us</h1>
 
-        <h1>About Us</h1>
-
-        <p>
-          Welcome to Burger Shop. We are committed to serving fresh,
-          high-quality burgers with outstanding customer service.
-        </p>
-      </div>
+          <p>
+            At Burger Shop, we believe great food brings people together. Every
+            burger is crafted with premium ingredients, bold flavors, and a
+            commitment to quality, creating memorable dining experiences for
+            every guest.
+          </p>
+        </div>
+      </main>
     </section>
   )
 }
